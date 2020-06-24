@@ -1,0 +1,382 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+% Formatting package
+\usepackage{graphicx}       % For import picture
+\usepackage{vntex}          % Tieng Viet
+\usepackage[english]{babel}
+\usepackage{indentfirst}    % For indentation
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+% \usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage[nottoc]{tocbibind}
+
+% Addtional Package
+% \usepackage{package_name}
+
+\begin{document}
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+% \renewcommand{\baselinestretch}{2.0}
+\centering
+
+\large VIETNAM NATIONAL UNIVERSITY\\ 
+HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY \\
+FACULTY OF COMPUTER SCIENCE AND ENGINEERING \\ 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.3]{Picture/logo.png}
+    \label{fig:logo}
+\end{figure}
+
+\bfseries
+\Large{GRADUATION THESIS PROPOSAL} \\
+\HRule \\ [0.5cm]
+\Large{BUILDING SMART RECOMMENDATION CHATBOT USING BLOCKCHAIN TECHNOLOGY IN SECURITY}
+\HRule \\ [2cm]
+
+\normalfont
+\normalsize
+\begin{tabular}{r l}
+    Council: & Software Engineer\\
+    Instructor: & Assoc. Prof. Quản Thành Thơ  \\
+    Reviewer: & Dr. Lê Lam Sơn \\
+    Students: & Nguyễn Xuân Huy - 1652247 \\
+    & Kim Hoàng Long - 1652758 \\
+    & Nguyễn Tấn Dũng - 1652119 \\
+    & Triệu Kim Toàn - 1652614 \\
+\end{tabular} 
+\\ [1.2cm]
+\HRule \\
+Ho Chi Minh City, December 2019
+% \vfill
+\end{titlepage}
+
+\newpage
+
+%%%%%%% HEADER AND FOOTER STYLE %%%%%%%
+
+\fancypagestyle{plain}{
+    \fancyhead{} % Clear all header
+    \fancyfoot{} % clear all footer fields
+    \fancyfoot[L]{\scriptsize Thesis Proposal}
+    \fancyfoot[R]{\scriptsize Page {\thepage}/\pageref{LastPage}}
+}
+\pagestyle{plain}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+%%%%%% SECTION STYLE %%%%%%
+
+%%subsection, subsubsubsection %%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+%%%%%% Link setup %%%%%%
+
+\hypersetup{
+    urlcolor = black,
+    linkcolor = black,
+    citecolor = black,
+    hidelinks
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\pagenumbering{arabic} % Start page numbering
+
+\chapter*{Acknowledgment} % TODO: Translate to English
+We guarantee that this research is our own, conducted under the supervision and  guidance of Assoc. Prof. Quản Thành Thơ. The result of our research is legitimate and has not been published in any forms prior to this. All materials used within this researched are collected by ourselves, by various sources and are appropriately listed in the references section.
+
+In addition, within this research, we also used the results of several other authors and organizations. They have all been aptly referenced.
+
+In any case of plagiarism, we stand by our actions and are to be responsible for it. Ho Chi Minh city University of Technology therefore are not responsible for any copyright infringements conducted within our research.
+
+
+% We assure you that this is our own research project under the guidance of Assoc.Prof. Dr. Quan Thanh Tho. Research content and results are honest and have never been published before. The data used for the analysis process, our own comments collected from many different sources and will be specified in the references.
+
+% In addition, we also use some comments, reviews and data from other authors and other organizations. All have citations and footnotes.
+
+% If there is any fraud, we assume full responsibility for the content of our graduation internship. Ho Chi Minh City Polytechnic University is not related to copyright and copyright infringement caused by us during the implementation process.
+
+\newpage
+
+\chapter*{Abstract}
+% Abstract of the project
+Google has grown to be one of the most widely used tool for searching the Internet. Nowadays, one can obtain almost any information across various topics within a few keystrokes. However, as smart as Google's ranking algorithms may be, some domain-specific queries still delivered lackluster results, and require users to exhaustively search for the desired information.
+
+Our work aims to build a conversational virtual assistant, linked with a tailored knowledge based of several domain-specific data sources, to assist such users to find their required information by intuitively guiding them through a series of questions, during the course of which the user's preferences are studied and targeted results are delivered.
+
+% Chem gio tiep di cac ban >.<
+
+\newpage
+\renewcommand{\contentsname}{Table of contents}
+\tableofcontents
+
+\newpage
+
+\renewcommand{\chaptername}{Chapter}
+
+\input{Chapters/1_Introduction} % Introduction
+
+\input{Chapters/2_Theory.tex}
+
+\input{Chapters/3_Design.tex}
+
+\input{Chapters/4_Summary.tex}
+\renewcommand{\bibname}{References}
+\bibliographystyle{unsrt}
+\bibliography{Bibliography}
+
+\end{document}
+
+{
+
+    % \usepackage[utf8]{inputenc}
+    % \usepackage{vntex}
+    % % \usepackage{blindtext}
+    % \usepackage{titlesec}
+    % \usepackage{amssymb}
+    % \usepackage{amsthm}
+    % \usepackage{amstext}
+    % \usepackage{amsfonts}
+    % \usepackage{amsmath}
+    % \usepackage{placeins}
+    % \usepackage{indentfirst}
+    % \usepackage{fancyhdr}
+    % \usepackage{pdfpages}
+    
+    % % PSEUDOCODE
+    % \usepackage{float}% http://ctan.org/pkg/float
+    % \usepackage[ruled,linesnumbered]{algorithm2e}
+    % \newenvironment{myalgo}[1][htb]
+    %   {\renewcommand{\algorithmcfname}{Giải thuật}% Update algorithm name
+    %    \begin{algorithm}[#1]%
+    %   }{\end{algorithm}}
+    % \SetKwInput{KwInput}{Input}
+% \SetKwInput{KwOutput}{Output}
+% \SetKwInput{KwMethod}{Method}
+% \SetKwInput{KwVar}{Variables}
+% \SetKwInput{KwProcedure}{Thủ tục}
+% \SetKwBlock{kwClass}{class}{end}
+% \SetKwProg{kwclass}{class}{}{end}
+% \SetKwProg{kwMethodInClass}{method}{}{end}
+% \SetKwBlock{kwOutputBlock}{Outputs}{EndOutputs}
+% \SetKwBlock{kwVarBlock}{Variables}{EndVariables}
+
+% %%%
+% \newcommand\tab[1][1cm]{\hspace*{#1}}
+
+% \usepackage{tikz}
+% \usetikzlibrary{calc}
+
+% % Include any extra LaTeX packages required
+% \usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
+% \usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
+% % \usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+
+% % \usepackage{mathptmx}
+% %\usepackage{courier}
+
+% % \titleformat
+% % {\chapter} % command
+% % [display] % shape
+% % {\normalfont\LARGE\bfseries} % format
+% % {Chương \ \thechapter} % label
+% % {2ex}{}[]
+
+% \titleformat{\section}[block]
+% {\Large\normalfont\bfseries}
+% {\thesection}{1em}{}[]
+
+
+% \usepackage{pgf}
+% \usepackage{tikz}
+% \usetikzlibrary{arrows,shapes,automata,petri,positioning,calc,fit,backgrounds,shapes.arrows,shapes.geometric,chains,matrix}
+
+% \titlespacing*{\section}{0.1pc}{2pc}{1pc}
+% \usepackage{enumerate}
+% \usepackage{listings}
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=newest}
+% \usepackage{forest}
+% \usepackage{tikz-qtree}
+% \usepackage{multirow}
+% \usepackage{array}
+% \usepackage{makecell}
+% \usepackage{graphicx}
+% \usepackage{geometry}
+% % header
+% \usepackage{lipsum}
+% \pagenumbering{roman}
+% % \renewcommand\chaptermark[1]{\markboth{Chương \thechapter. \itshape #1}{}}
+% \geometry{a4paper} %paper format
+%  \geometry{left=3cm,right=2.3cm,bottom=2.8cm,top=2cm} %margins
+% % \fancypagestyle{plain}{
+    % % \fancyhf{}
+    % % % \fancyhead[L]{\normalfont\leftmark}
+    % % % \fancyhead[R]{\bfseries\thepage}
+    % % \fancyhead[C]{\thepage}
+    % % \renewcommand\headrulewidth{0pt}}
+    % % \pagestyle{plain}
+    % % \usepackage{fancyhdr}
+    % % \fancypagestyle{plain}{%
+    % % \fancyhf{} % clear all header and footer fields
+    % % \fancyhead[C]{\thepage} % except the center
+    % % \renewcommand{\headrulewidth}{0pt}
+    % % \renewcommand{\footrulewidth}{0pt}}
+    % %activate the style:
+    % % \pagestyle{plain}
+    % % \theoremstyle{definition}
+    % \newtheorem{definition}{Định nghĩa}[section]
+    % \newtheorem{example}{Ví dụ}[section]
+    % \newtheorem{rules}{Luật}[section]
+    % % \usepackage{chngcntr}
+    
+    % % \counterwithout{figure}{chapter}
+    % % \counterwithout{table}{chapter}
+    % % \usepackage{fontspec}
+    % % \setmainfont{Times New Roman}
+    % % \pagenumbering{arabic}
+    % % \cfoot{\thepage}
+    
+    % %% set section 3.3.3.1
+    % \setcounter{secnumdepth}{4}
+    % %\setcounter{tocdepth}{3}
+    
+    % \begin{document}
+    
+    % \begin{titlepage}
+        
+        % \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+        % % \renewcommand{\baselinestretch}{2.0}
+        % \centering
+        
+        % \large VIETNAM NATIONAL UNIVERSITY\\ 
+        % HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY \\
+        % FACULTY OF COMPUTER SCIENCE AND ENGINEERING \\ 
+        
+        % \begin{figure}[!ht]
+            %     \centering
+            %     \includegraphics[scale=0.3]{Picture/logo.png}
+            %     \label{fig:logo}
+        % \end{figure}
+        
+        % \bfseries
+        % \Large{GRADUATION THESIS PROPOSAL} \\
+        % \HRule \\ [0.5cm]
+        % \Large{BUILDING SMART RECOMMENDATION CHATBOT USING BLOCKCHAIN TECHNOLOGY IN SECURITY}
+        % \HRule \\ [4cm]
+        
+        % \normalfont
+        % \normalsize
+% % \small
+% \begin{tabular}{r l}
+    %     Council: & Software Engineer\\
+    %     Instructor: & Assoc. Prof. Quản Thành Thơ  \\
+    %     Reviewer: & TS. Lê Lam Sơn \\
+    %     Students: & Nguyễn Xuân Huy - 1652247 \\
+    %     & Kim Hoàng Long - 1652758 \\
+    %     & Nguyễn Tấn Dũng - 1652119 \\
+    %     & Triệu Kim Ton - 1652614 \\
+% \end{tabular} 
+% \\ [1.2cm]
+% \HRule \\
+% Ho Chi Minh City, December 2019
+% % \vfill
+% \end{titlepage}
+% \newpage
+% \newpage
+% \chapter*{Lời cam đoan}
+% \noindent 
+%     % Khai phá dữ liệu không phải là một đề tài mới nhưng vẫn luôn là một thách thức khó khăn bởi nguồn dữ liệu đầu vào rất đa dạng, phong phú và kết quả đầu ra phải đạt được những ý nghĩa nhất định. Trong quá trình nghiên cứu đề tài có rất nhiều kiến thức không nằm trong chương trình giảng dạy ở bậc Đại học tuy vậy chúng tôi xin cam đoan đây là công trình nghiên cứu của riêng chúng tôi dưới sự hướng dẫn của tiến sĩ Phan Trọng Nhân. Nội dung nghiên cứu và các kết quả đều là trung thực và chưa từng được công bố trước đây. Các số liệu được sử dụng cho quá trình phân tích, nhận xét được chính chúng tôi thu thập từ nhiều nguồn khác nhau và sẽ được ghi rõ trong phần tài liệu tham khảo. \\
+%     Chúng tôi xin cam đoan rằng, luận văn tốt nghiệp "Khai phá luật kết hợp đa quan hệ từ tập dữ liệu bán hàng" là công trình nghiên cứu của riêng chúng tôi dưới sự hướng dẫn của tiến sĩ Phan Trọng Nhân. Nội dung nghiên cứu và các kết quả đều là trung thực và chưa từng được công bố trước đây. Các số liệu được sử dụng cho quá trình phân tích, nhận xét được chính chúng tôi thu thập từ nhiều nguồn khác nhau và sẽ được ghi rõ trong phần tài liệu tham khảo. \\
+
+%     Ngoài ra, chúng tôi cũng có sử dụng một số nhận xét, đánh giá và số liệu của các tác giả khác, cơ quan tổ chức khác. Tất cả đều có trích dẫn và chú thích nguồn gốc. \\
+
+%     Nếu phát hiện có bất kì sự gian lận nào, chúng tôi xin hoàn toàn chịu trách nhiệm về nội dung luận văn tốt nghiệp của mình. Trường đại học Bách Khoa thành phố Hồ Chí Minh không liên quan đến những vi phạm tác quyền, bản quyền do chúng tôi gây ra trong quá trình thực hiện.
+% \begin{flushright}
+    % Sinh viên thực hiện
+% \end{flushright}
+% \chapter*{Lời cảm ơn}
+%  	Để hoàn thành luận văn này, chúng tôi tỏ lòng biết ơn sâu sắc đến tiến sĩ Phan Trọng Nhân đã chỉ bảo và hướng dẫn tận tình trong suốt quá trình nghiên cứu. \\
+
+
+% 	Chúng tôi chân thành cám ơn quý thầy, cô trong khoa Khoa Học Và Kỹ Thuật Máy Tính, trường Đại học Bách Khoa thành phố Hồ Chí Minh đã tận tình truyền đạt kiến thức trong những năm chúng tôi học tập ở trường. Với vốn kiến thức tích lũy được trong suốt quá trình học tập không chỉ là nền tảng cho quá trình nghiên cứu mà còn là hành trang để bước vào đời một cách tự tin. \\
+
+% 	Mặc dù đã có nhiều cố gắng trong quá trình nghiên cứu, song do khả năng và kinh nghiệm của nhóm có hạn, nên luận văn không tránh khỏi những tồn tại, hạn chế và thiếu sót. Vì vậy tôi rất mong được nhận được sự góp ý chân thành của quý thầy cô nhằm bổ sung hoàn thiện trong quá trình nghiên cứu tiếp theo. \\
+	
+% 	Cuối cùng, chúng tôi xin chúc quý thầy cô dồi dào sức khỏe và thành công trong sự nghiệp cao quý.
+% \begin{flushright}
+    % Sinh viên thực hiện
+% \end{flushright}
+% \chapter*{Tóm tắt}
+
+% Khai phá dữ liệu không phải là một đề tài mới nhưng vẫn luôn là một thách thức khó khăn bởi nguồn dữ liệu đầu vào rất đa dạng, phong phú và kết quả đầu ra phải đạt được những ý nghĩa nhất định.\\
+
+% Trong luận văn này, chúng tôi sẽ trình bày chi tiết về một số giải khai phá luật kết hợp đa quan hệ nổi bật nhất, đặc biệt là giải thuật MRAR. Kế tiếp chúng tôi sẽ đưa ra những phân tích về ưu nhược điểm sẽ gặp phải khi sử dụng các giải thuật này để giải quyết vấn đề, từ đó có thể đưa ra được một số cải tiến nhất định có thể áp dụng nhầm tăng tốc độ xử lí và cho ra kết quả tốt hơn. Sau cùng, chúng tôi cũng phát triển một hệ thống website thương mại điện tử áp dụng trực tiếp các cải tiến vào đó nhằm mang lại độ trực quan cao hơn.
+% \tableofcontents
+
+% \renewcommand{\listfigurename}{Danh mục hình vẽ}
+% \renewcommand{\listtablename}{Danh mục bảng}
+% % \listoftables
+% {%
+% \let\oldnumberline\numberline%
+% \renewcommand{\numberline}{\tablename~\oldnumberline}%
+% \listoftables%
+% }
+% % \listoffigures
+% {%
+% \let\oldnumberline\numberline%
+% \renewcommand{\numberline}{\figurename~\oldnumberline}%
+% \listoffigures%
+% }
+
+
+% \newpage
+% \pagenumbering{arabic}
+% % \input{Chapters/Chapter1} % Introduction
+
+
+% % \input{Chapters/Chapter2} % Background Theory 
+
+% % \input{Chapters/Related} 
+
+% % \input{Chapters/Heuristic} 
+
+% % \input{Chapters/Chapter3} % Experimental Setup
+
+% % \input{Chapters/Result.tex}
+
+% % \input{Chapters/Chapter4} % Experiment 1
+
+% \label{Bibliography}
+% \lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
+% \bibliographystyle{unsrtnat}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+% \bibliography{Bibliography}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+
+% \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% % \input{Chapters/phuluc.tex}
+
+% \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+
+
+% \end{document}
+
+}
